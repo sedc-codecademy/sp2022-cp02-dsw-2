@@ -1,0 +1,16 @@
+body {
+  background-color: aqua;
+}
+.header {
+  margin: auto;
+  width: 50%;
+  padding: auto;
+}
+.center {
+  display: block;
+  border: 5px solid black;
+  border-radius: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
