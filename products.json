@@ -1,0 +1,86 @@
+[
+    {
+        "name":"1883 Chocolate Syrup 250ml",
+        "category":"Coffee Syrups",
+        "price":"299 den.",
+        "img":"products/01s.png"
+    },
+    {
+        "name":"1883 Irish Cream Syrup 250ml",
+        "category":"Coffee Syrups",
+        "price":"299 den.",
+        "img":"products/02s.png"
+    },
+    {
+        "name":"1883 Salted Caramel Syrup 250ml",
+        "category":"Coffee Syrups",
+        "price":"299 den.",
+        "img":"products/03s.png"
+    },
+    {
+        "name":"1883 Vanilla Syrup 250ml",
+        "category":"Coffee Syrups",
+        "price":"299 den.",
+        "img":"products/04s.png"
+    },
+    {
+        "name":"Double-wall cup 80ml",
+        "category":"Accesorries",
+        "price":"299 den.",
+        "img":"products/01a.png"
+    },
+    {
+        "name":"Double-wall cup 150ml",
+        "category":"Accesorries",
+        "price":"399 den.",
+        "img":"products/02a.png"
+    },
+    {
+        "name":"Gimoka Dolce Gusto espresso Cremoso x16",
+        "category":"Capsules",
+        "price":"250 den.",
+        "img":"products/01k.png"
+    },
+    {
+        "name":"Gimoka Dolce Gusto espresso Intenso x16",
+        "category":"Capsules",
+        "price":"250 den.",
+        "img":"products/02k.png"
+    },
+    {
+        "name":"Gimoka Dolce Gusto espresso Soave Decaffeinatte x16",
+        "category":"Capsules",
+        "price":"250 den.",
+        "img":"products/03k.png"
+    },
+    {
+        "name":"Gimoka Dolce Gusto espresso Americano Филтер Arabica x16",
+        "category":"Capsules",
+        "price":"250 den.",
+        "img":"products/04k.png"
+    },
+    {
+        "name":"Garibaldi NOA Eclissi White Coffee Machine",
+        "category":"Coffee Machines",
+        "price":"3200 den.",
+        "img":"products/eclissi-kafemat.png"
+    },
+    {
+        "name":"Dolce Gusto XS Red Coffee Machine",
+        "category":"Coffee Machines",
+        "price":"4200 den.",
+        "img":"products/krups-kafemat.png"
+    },
+    {
+        "name":"Moka Oceanica Pot 3 cups",
+        "category":"Coffee Machines",
+        "price":"890 den.",
+        "img":"products/moka-pot.png"
+    },
+    {
+        "name":"Moka Oceanica Pot 3 cups Blue",
+        "category":"Coffee Machines",
+        "price":"890 den.",
+        "img":"products/moka-pot-2.png"
+    }
+]

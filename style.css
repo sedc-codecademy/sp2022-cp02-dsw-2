@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+:root{
+    --ghost-white: #f8f9fd;
+    --fire-bush: #e99c2f;
+    --granite-gray: #626a6a;
+    --baltic-sea: #33383c;
+    --trans: all 0.5s ease-in-out;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+}
+body{
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* resets and resuable stylings */
+img{
+    display: block;
+    width: 100%;
+}
+button{
+    cursor: pointer;
+    outline: 0;
+}
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+    
+
+
+/* products */
+.products{
+    padding: 6rem 0;
+}
+.products h2{
+    text-align: center;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--granite-gray);
+    margin-bottom: 3rem;
+}
+.product-item{
+    margin: 1rem 0;
+}
+.product-img{
+    background: var(--ghost-white);
+    padding: 3rem 0;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+.product-img img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    width: 60%;
+    margin: 0 auto;
+    transition: var(--trans);
+    -webkit-transition: var(--trans);
+    -moz-transition: var(--trans);
+    -ms-transition: var(--trans);
+    -o-transition: var(--trans);
+}
+.product-img:hover img{
+    opacity: 0.8;
+}
+.product-content{
+    padding: 1.6rem 0;
+    text-align: center;
+}
+.add-to-cart-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    border: none;
+    padding: 0.75rem 1.2rem;
+    font-size: 1.05rem;
+    background-color: var(--baltic-sea);
+    color: #fff;
+    transition: var(--trans);
+    -webkit-transition: var(--trans);
+    -moz-transition: var(--trans);
+    -ms-transition: var(--trans);
+    -o-transition: var(--trans);
+    opacity: 0;
+}
+.product-item:hover .add-to-cart-btn{
+    opacity: 1;
+}
+.add-to-cart-btn .fas{
+    margin-right: 0.4rem;
+}
+.add-to-cart-btn:hover{
+    background-color: #23272a;
+}
+.add-to-cart-btn:hover{
+    color: var(--fire-bush);
+}
+.product-name{
+    font-size: 1.3rem;
+    color: var(--baltic-sea);
+}
+.product-category{
+    margin:  0.8rem 0;
+    display: inline-block;
+    font-weight: 500;
+    background: var(--fire-bush);
+    color: #fff;
+    padding: 0.05rem 1.5rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    letter-spacing: 2px;
+}
+.product-price{
+    font-size: 1.15rem;
+    font-weight: 500;
+    opacity: 0.6;
+}
+
+
+
+
+/* Media Queries for responsiveness */
+
+@media screen and (min-width: 480px){
+    /* header */
+    .btns button{
+        display: inline-block;
+    }
+    .btns button:first-child{
+        margin-right: 0.4rem;
+    }
+}
+
+@media screen and (min-width: 680px){
+    .navbar{
+        padding: 1.5rem 3rem!important;
+    }
+    .cart-container{
+        width: 480px;
+        left: auto;
+        right: 3rem;
+    }
+    .product-list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .navbar{
+        padding: 1.5rem 6rem!important;
+    }
+    .cart-container{
+        right: 6rem;
+    }
+    .banner{
+        padding-top: 0;
+        display: grid;
+        grid-template-columns: 55% 45%;
+        align-content: center;
+    }
+    .banner-content{
+        text-align: left;
+    }
+    .product-list{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer-banner{
+        text-align: left;
+    }
+    .footer-banner .text{
+        width: 60%;
+    }
+    .footer-banner .btn{
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .navbar{
+        padding: 1.5rem 14rem!important;
+    }
+    .cart-container{
+        right: 14rem;
+    }
+    .banner-content h1{
+        font-size: 3.5rem;
+    }
+    .product-list{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
