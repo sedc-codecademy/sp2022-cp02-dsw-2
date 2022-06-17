@@ -3,46 +3,56 @@
 
 :root{
     --ghost-white: #f8f9fd;
-    --fire-bush: #e99c2f;
+    --fire-bush: #3c8320d8;
     --granite-gray: #626a6a;
     --baltic-sea: #33383c;
     --trans: all 0.5s ease-in-out;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Barlow', sans-serif;
 }
-body{
+
+body {
     line-height: 1.5;
     font-weight: 400;
 }
 
 /* resets and resuable stylings */
-img{
+img {
     display: block;
-    width: 100%;
+    width: 100px;
 }
-button{
+
+button {
     cursor: pointer;
     outline: 0;
 }
 
-.container{
+.container {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 1.5rem;
-}
     
+}
+
 
 
 /* products */
-.products{
-    padding: 6rem 0;
+.products {
+    /* visibility: hidden; */
+    padding: 6rem 6rem;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(85, 190, 85, 0.466);
 }
-.products h2{
+
+.products h2 {
+    /* visibility: hidden; */
+    align-items: center;
     text-align: center;
     font-size: 2.2rem;
     text-transform: uppercase;
@@ -50,17 +60,22 @@ button{
     color: var(--granite-gray);
     margin-bottom: 3rem;
 }
-.product-item{
+
+.product-item {
     margin: 1rem 0;
 }
-.product-img{
+
+.product-img {
+    /* visibility: hidden; */
     background: var(--ghost-white);
     padding: 3rem 0;
     height: 350px;
     overflow: hidden;
     position: relative;
 }
-.product-img img{
+
+.product-img img {
+    /* visibility: hidden; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -77,14 +92,18 @@ button{
     -ms-transition: var(--trans);
     -o-transition: var(--trans);
 }
-.product-img:hover img{
+
+.product-img:hover img {
+    /* visibility: hidden; */
     opacity: 0.8;
 }
-.product-content{
+
+.product-content {
     padding: 1.6rem 0;
     text-align: center;
 }
-.add-to-cart-btn{
+
+.add-to-cart-btn {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -105,24 +124,32 @@ button{
     -o-transition: var(--trans);
     opacity: 0;
 }
-.product-item:hover .add-to-cart-btn{
+
+.product-item:hover .add-to-cart-btn {
     opacity: 1;
 }
-.add-to-cart-btn .fas{
+
+.add-to-cart-btn .fas {
     margin-right: 0.4rem;
 }
-.add-to-cart-btn:hover{
+
+.add-to-cart-btn:hover {
     background-color: #23272a;
 }
-.add-to-cart-btn:hover{
+
+.add-to-cart-btn:hover {
     color: var(--fire-bush);
 }
-.product-name{
+
+.product-name {
+    /* visibility: hidden; */
     font-size: 1.3rem;
     color: var(--baltic-sea);
 }
-.product-category{
-    margin:  0.8rem 0;
+
+.product-category {
+    /* visibility: hidden; */
+    margin: 0.8rem 0;
     display: inline-block;
     font-weight: 500;
     background: var(--fire-bush);
@@ -135,7 +162,8 @@ button{
     -o-border-radius: 5px;
     letter-spacing: 2px;
 }
-.product-price{
+
+.product-price {
     font-size: 1.15rem;
     font-weight: 500;
     opacity: 0.6;
@@ -147,7 +175,7 @@ button{
 /* Media Queries for responsiveness */
 
 @media screen and (min-width: 480px){
-    /* header */
+    
     .btns button{
         display: inline-block;
     }
@@ -155,8 +183,7 @@ button{
         margin-right: 0.4rem;
     }
 }
-
-@media screen and (min-width: 680px){
+ @media screen and (min-width: 680px){
     .navbar{
         padding: 1.5rem 3rem!important;
     }
@@ -170,8 +197,7 @@ button{
         grid-template-columns: repeat(2, 1fr);
         column-gap: 2rem;
     }
-}
-
+}  
 @media screen and (min-width: 992px){
     .navbar{
         padding: 1.5rem 6rem!important;
@@ -200,9 +226,10 @@ button{
     .footer-banner .btn{
         margin-left: 0;
     }
-}
 
-@media screen and (min-width: 1200px){
+} 
+
+ @media screen and (min-width: 1200px){
     .navbar{
         padding: 1.5rem 14rem!important;
     }
@@ -215,4 +242,63 @@ button{
     .product-list{
         grid-template-columns: repeat(4, 1fr);
     }
+}  */
+
+body {
+    margin: 0px;
+} 
+
+.navBar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: green;
+    z-index: 1;
+}
+
+.logo {
+    display: inline-block;
+    color: white;
+    padding-left: 30px;
+}
+
+.navLinks {
+    display: flex;
+    padding-right: 40px;
+}
+
+.navLinks a {
+    display: inline-block;
+    padding: 10px 15px;
+    color: white;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://www.comunicaffe.com/wp-content/uploads/2018/11/Starbucks-New-York.jpg");
+
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer {
+    display: flex;
+    background-color: black;
+    color: aliceblue;
+    justify-content: space-between;
+}
+
+.footer-element-2 {
+    padding-right: 60px;
+    padding-top: 60px;
+}
+
+.footer-element-1 {
+    padding-left: 40px;
 }
