@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-body {
-    margin: 0px;
-}
-=======
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
@@ -252,7 +247,6 @@ button {
 body {
     margin: 0px;
 } 
->>>>>>> product_section
 
 .navBar {
     position: fixed;
@@ -261,10 +255,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: green;
-<<<<<<< HEAD
-=======
     z-index: 1;
->>>>>>> product_section
 }
 
 .logo {
@@ -289,10 +280,6 @@ main {
     align-items: center;
     justify-content: center;
     background-image: url("https://www.comunicaffe.com/wp-content/uploads/2018/11/Starbucks-New-York.jpg");
-<<<<<<< HEAD
-=======
-
->>>>>>> product_section
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
