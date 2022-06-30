@@ -14,17 +14,47 @@
 
 <body>
     <header>
-        <nav class="navBar">
-            <h1 class="logo">Coffee Shop</h1>
-            <div class="navLinks">
-                <a href="#" id="home_button">Home</a>
-                <a href="#products" id="product_button">Products</a>
-                <a href="#">Contact</a>
-                <a href="#">Search</a>
-            </div>
-        </nav>
+        <div class="container">
+            <nav class="navbar">
+                <h1 class="logo">Coffee Shop</h1>
+                <div class="navLinks">
+                    <a href="#" id="home_button">Home</a>
+                    <a href="#products" id="product_button">Products</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Search</a>
+                </div>
+                <div class="cart">
+                    <button type="button" id="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count-info"></span>
+                    </button>
+
+                    <div class="cart-container">
+                        <div class="cart-list">
+                            <!-- single item -->
+                            <!-- <div class = "cart-item">
+                                  <img src = "images/armchair.png" alt = "product image">
+                                  <div class = "cart-item-info">
+                                    <h3 class = "cart-item-name">Arm Chair</h3>
+                                    <span class = "cart-item-category">Chair</span>
+                                    <span class = "cart-item-price">$120.00</span>
+                                  </div>
+                
+                                  <button type = "button" class = "cart-item-del-btn">
+                                    <i class = "fas fa-times"></i>
+                                  </button>
+                                </div> -->
+                            <!-- end of single item  -->
+                        </div>
+
+                        <div class="cart-total">
+                            <h3>Денари: </h3>
+                            <span id="cart-total-value"></span>
+                        </div>
+                    </div>
+            </nav>
+        </div>
     </header>
-    
     <main>
         <p>
             This is main Content
@@ -42,7 +72,6 @@
         </div>
     </section>
     <!-- end of products section -->
-    
     <footer id="footer">
         <div class="footer-element-1">
             <h4>Company Info:</h4>
