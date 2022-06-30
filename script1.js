@@ -1,3 +1,4 @@
+
 const cartContainer = document.querySelector('.cart-container');
 const cartList = document.querySelector('.cart-list');
 const cartTotalValue = document.getElementById('cart-total-value');
@@ -9,6 +10,7 @@ let home_button=document.getElementById("home_button");
 let main_section=document.getElementsByTagName("main")[0];
 let product_section=document.getElementById("products");
 
+
 const productList = document.querySelector('.product-list');
 let cartItemID = 1;
 
@@ -19,12 +21,11 @@ function eventListeners(){
     window.addEventListener('DOMContentLoaded', () => {
         loadJSON();
         window.localStorage.clear();
-      
+  
         
     });
     
 }
-
 product_section.style.display="none";
 
 product_button.addEventListener('click', function(){
@@ -49,6 +50,7 @@ function loadJSON(){
                 <div class = "product-item">
                     <div class = "product-img">
                         <img src = "${product.imgSrc}" alt = "product image">
+
                         <button type = "button" class = "add-to-cart-btn">
                             <i class = "fas fa-shopping-cart"></i>Add To Cart
                         </button>
