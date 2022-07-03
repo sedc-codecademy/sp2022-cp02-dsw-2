@@ -9,6 +9,8 @@
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/categories.css">
+    <link rel="stylesheet" href="./css/products.css">
     <title>Document</title>
 </head>
 
@@ -23,7 +25,14 @@
                     <a href="#" id="product_button">Products</a>
                     <a href="#" id="sale">Sale</a>
                     <a href="#">Contact</a>
-                    <a href="#">Search</a>
+                    <a href="#">
+                        <form>
+                            <input class="searchBar" 
+                            type="text"
+                            placeholder="Search..."
+                            />                            
+                        </form>
+                    </a>
                 </div>
                 <div class="cart">
                     <button type="button" id="cart-btn">
@@ -59,19 +68,36 @@
     </header>
 
     <main>
-        <p>
-            This is main Content
-        </p>
-
+        <div class="categories">
+            <div class="card_container">
+               <div class="card">
+                   <img src="./imgs/categories/syrup3.png" alt="Coffee Syrup" style="width:50%">
+                   <h1>Coffee Syrups</h1>
+                   <p><button id="coffee_syrups_btn">See more...</button></p>
+                </div>
+                <div class="card">
+                   <img src="./imgs/categories/accessories3.png" alt="Accessories" style="width:50%">
+                   <h1>Accessories</h1>
+                   <p><button id="accessories_btn">See more...</button></p>
+                </div>
+                <div class="card">
+                   <img src="./imgs/categories/capsule3.png" alt="Coffee Capsules" style="width:50%">
+                   <h1>Coffee Capsules</h1>
+                   <p><button id="coffee_capsules_btn">See more...</button></p>
+                </div>
+                <div class="card">
+                   <img src="./imgs/categories/machine3.png" alt="Coffee Machines" style="width:50%">
+                   <h1>Coffee Machines</h1>
+                   <p><button id="coffee_machines_btn">See more...</button></p>
+                </div>                                     
+            </div>
+       </div>
     </main>
     <!-- products section  -->
     <section class="products" id="products">
         <div class="container">
             <h2>All Products</h2>
-            <div class="product-list">
-
-
-            </div>
+            <div class="product-list"></div>
         </div>
     </section>
     <!-- end of products section -->
