@@ -21,6 +21,12 @@
     justify-content: space-around;
   }
 
+
+
+.searchBar {
+  width: 30vh;
+  height: 05vh;
+
 /* 
  .sale_card button {
     border-radius: 300px;
@@ -68,8 +74,9 @@
 }  */
 
 .searchBar {
-  width: 150px;
-  height: 32px;
+  width: 30vh;
+  height: 05vh;
+
   font-size: large;
   background: rgba(255, 255,255, 0.2);
   background: rgb(247, 247, 230);

@@ -152,12 +152,6 @@ function purchaseProduct(e) {
     }
 
 }
-function updateCartInfo() {
-    let cartInfo = darko();
-    innerHTML =
-        cartCountInfo.textContent = cartInfo.productCount;
-    cartTotalValue.textContent = cartInfo.total;
-}
 cartList.addEventListener('click', deleteProduct);
 // get product info after add to cart button click
 function getProductInfo(product) {
@@ -182,7 +176,8 @@ function addToCartList(product) {
         <div class = "cart-item-info">
             <h3 class = "cart-item-name">${product.name}</h3>
             <span class = "cart-item-category">${product.category}</span>
-            <span class = "cart-item-price">${product.price}</span>
+            <span class = "cart-item-price">${product.price} ден.</span>
+
         </div>
 
         <button type = "button" class = "cart-item-del-btn">
@@ -218,7 +213,9 @@ function calculatePrice() {
     let products = getProductFromStorage();
     console.log(products);
     let total = products.reduce((acc, el) => acc + Number(el.price), 0)
-    return { total };
+    return { total: total.toFixed(2),
+    productCount: products.length };
+
 }
 
 
