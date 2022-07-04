@@ -109,7 +109,7 @@ function sale() {
                 if (product.sale !== product.price) {
 
                     html += `<div class = "product-item">
-                        <div class = "product-img-sale">
+                        <div class = "product-img">
                             <img src = "${product.imgSrc}" alt = "product image" >
 
                             <button type = "button" class = "add-to-cart-btn">
@@ -236,3 +236,4 @@ function deleteProduct(e) {
     localStorage.setItem('products', JSON.stringify(updatedProducts)); // updating the product list after the deletion
     updateCartInfo();
 }
+/////
