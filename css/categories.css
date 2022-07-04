@@ -22,9 +22,61 @@
   }
 
 
+
 .searchBar {
   width: 30vh;
   height: 05vh;
+
+/* 
+ .sale_card button {
+    border-radius: 300px;
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: rgb(62, 146, 62);
+  text-align: center;
+  cursor: pointer;
+  width: 80%;
+  font-size: 18px;
+} */
+
+
+/* .sale_card{
+    font-size: medium;
+    border-radius: 50px;
+    box-sizing: content-box; 
+    flex-wrap: wrap;
+    border: 2px solid lightgoldenrodyellow;
+    border-style: groove;
+    box-shadow: 0 4px 8px 0 rgba(255, 240, 193, 100);
+    width: 250px;
+     max-width: 250px; 
+    margin: auto;
+    text-align: center;
+    background-color: rgba(255, 240, 193, .5);
+    padding: 10px;
+}
+
+ .sale_card ul {
+    list-style-type: none;
+} 
+
+ .sale_card ul> li> img {
+    border: 2px solid black;
+    padding: 10%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.sale_card img {
+    margin-left: 73px;
+}  */
+
+.searchBar {
+  width: 30vh;
+  height: 05vh;
+
   font-size: large;
   background: rgba(255, 255,255, 0.2);
   background: rgb(247, 247, 230);

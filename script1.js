@@ -152,7 +152,6 @@ function purchaseProduct(e) {
     }
 
 }
-
 cartList.addEventListener('click', deleteProduct);
 // get product info after add to cart button click
 function getProductInfo(product) {
@@ -178,6 +177,7 @@ function addToCartList(product) {
             <h3 class = "cart-item-name">${product.name}</h3>
             <span class = "cart-item-category">${product.category}</span>
             <span class = "cart-item-price">${product.price} ден.</span>
+
         </div>
 
         <button type = "button" class = "cart-item-del-btn">
@@ -215,6 +215,7 @@ function calculatePrice() {
     let total = products.reduce((acc, el) => acc + Number(el.price), 0)
     return { total: total.toFixed(2),
     productCount: products.length };
+
 }
 
 
