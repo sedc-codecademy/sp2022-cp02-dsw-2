@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+.product-img{
+    height: 200px;
+    width: 420;
+    border-radius: 50px;
+}
+
+.product-item{
+    font-size: medium;
+    border-radius: 50px;
+    box-sizing: content-box; 
+    flex-wrap: wrap;
+    border: 2px solid lightgoldenrodyellow;
+    border-style: groove;
+    box-shadow: 0 4px 8px 0 rgba(255, 240, 193, 100); 
+    background-color: rgba(255, 240, 193, .5);
+    padding: 20px;
+}
+
+.product-img-sale{
+    height: 200px;
+    width: 420;
+    border-radius: 50px;    
+}
