@@ -37,7 +37,6 @@ function eventListeners() {
         loadAcsrs();
         loadCapsules();
         loadMachines();
-
         window.localStorage.clear();
         checkoutPage.style.display="none"
 
@@ -51,6 +50,7 @@ syrupsSection.style.display="none";
 acsrsSection.style.display="none";
 capsulesSection.style.display="none";
 machinesSection.style.display="none";
+
 
 
 
@@ -122,6 +122,7 @@ capsulesButton.addEventListener("click", function () {
     machinesSection.style.display="none"
 })
 machinesButton.addEventListener("click", function () {
+
     // footer.style.display = "none"
     product_section.style.display = "none"
     main_section.style.display = "none"
@@ -324,7 +325,7 @@ let checkoutPage=document.getElementById("checkoutPage")
 checkoutBtn.addEventListener("click", function(){
     product_section.style.display = "none"
     main_section.style.display = "none"
-    // footer.style.display = "none";
+   // footer.style.display = "none";
     saleSection.style.display = "none";
     checkoutPage.style.display="block"
     syrupsSection.style.display="none"
@@ -347,7 +348,7 @@ function loadCoffeeSyrups() {
                         html += `<div class = "product-item">
                             <div class = "product-img">
                                 <img src = "${product.imgSrc}" alt = "product image" >
-
+ 
                                 <button type = "button" class = "add-to-cart-btn">
                                     <i class = "fas fa-shopping-cart"></i>Add To Cart
                                 </button>
@@ -363,7 +364,8 @@ function loadCoffeeSyrups() {
                     }else{
                     html += `<div class = "product-item">
                         <div class = "product-img">
-                            <img src = "${product.imgSrc}" alt = "product image" >
+
+                          <img src = "${product.imgSrc}" alt = "product image" >
 
                             <button type = "button" class = "add-to-cart-btn">
                                 <i class = "fas fa-shopping-cart"></i>Add To Cart
@@ -398,7 +400,9 @@ function loadAcsrs() {
                 if (product.sale !== product.price) {
 
                     html += `<div class = "product-item">
+
                         <div class = "product-img">
+
                             <img src = "${product.imgSrc}" alt = "product image" >
 
                             <button type = "button" class = "add-to-cart-btn">
@@ -415,6 +419,7 @@ function loadAcsrs() {
 
                 }else{
                 html += `<div class = "product-item">
+
                     <div class = "product-img">
                         <img src = "${product.imgSrc}" alt = "product image" >
 
@@ -468,7 +473,9 @@ function loadCapsules() {
 
                 }else {
                 html += `<div class = "product-item">
+
                     <div class = "product-img">
+
                         <img src = "${product.imgSrc}" alt = "product image" >
 
                         <button type = "button" class = "add-to-cart-btn">
@@ -504,6 +511,7 @@ function loadMachines() {
                 if (product.sale !== product.price) {
 
                     html += `<div class = "product-item">
+
                         <div class = "product-img">
                             <img src = "${product.imgSrc}" alt = "product image" >
 
@@ -521,12 +529,15 @@ function loadMachines() {
 
                 }else {
                 html += `<div class = "product-item">
+
                     <div class = "product-img">
                         <img src = "${product.imgSrc}" alt = "product image" >
 
                         <button type = "button" class = "add-to-cart-btn">
                                 <i class = "fas fa-shopping-cart"></i>Add To Cart
                             </button>
+
+
                     </div>
                     <div class = "product-content">
                         <h3 class = "product-name">${product.name}</h3>
@@ -544,9 +555,13 @@ function loadMachines() {
         alert(`User live server or local server`);
         //URL scheme must be "http" or "https" for CORS request. You need to be serving your index.html locally or have your site hosted on a live server somewhere for the Fetch API to work properly.
     })
+
 }
 
 productListMachines.addEventListener("click", purchaseProduct);
 productListCapsules.addEventListener("click", purchaseProduct);
 productListAcsrs.addEventListener("click", purchaseProduct);
 productListSyrups.addEventListener("click", purchaseProduct);
+=======
+}
+

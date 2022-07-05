@@ -9,7 +9,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  
+
 }
 
 .card_container {
@@ -21,9 +21,9 @@
   position: relative;
   display: flex;
   justify-content: space-around;
-  
   /* z-index:999; */
-}
+
+
 
 
 
