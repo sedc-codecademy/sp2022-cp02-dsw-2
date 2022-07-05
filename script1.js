@@ -354,7 +354,7 @@ function loadCoffeeSyrups() {
                             </div>
                         </div>`
     
-                    }
+                    }else{
                     html += `<div class = "product-item">
                         <div class = "product-img-syrups">
                             <img src = "${product.imgSrc}" alt = "product image" >
@@ -370,6 +370,7 @@ function loadCoffeeSyrups() {
                         </div>
                     </div>
                     `;
+                    }
                 }
             });
             productListSyrups.innerHTML = html;
@@ -406,7 +407,7 @@ function loadAcsrs() {
                         </div>
                     </div>`
 
-                }
+                }else{
                 html += `<div class = "product-item">
                     <div class = "product-img-acsrs">
                         <img src = "${product.imgSrc}" alt = "product image" >
@@ -422,6 +423,7 @@ function loadAcsrs() {
                     </div>
                 </div>
                 `;
+                }
             }
         });
         productListAcsrs.innerHTML = html;
@@ -458,7 +460,7 @@ function loadCapsules() {
                         </div>
                     </div>`
 
-                }
+                }else {
                 html += `<div class = "product-item">
                     <div class = "product-img-capsules">
                         <img src = "${product.imgSrc}" alt = "product image" >
@@ -474,6 +476,7 @@ function loadCapsules() {
                     </div>
                 </div>
                 `;
+                }
             }
         });
         productListCapsules.innerHTML = html;
@@ -510,7 +513,7 @@ function loadMachines() {
                         </div>
                     </div>`
 
-                }
+                }else {
                 html += `<div class = "product-item">
                     <div class = "product-img-machines">
                         <img src = "${product.imgSrc}" alt = "product image" >
@@ -526,6 +529,7 @@ function loadMachines() {
                     </div>
                 </div>
                 `;
+                }
             }
         });
         productListMachines.innerHTML = html;
