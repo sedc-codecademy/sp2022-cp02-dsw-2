@@ -76,13 +76,7 @@
         "imgSrc":"products/eclissi-kafemat.png",
         "sale":2900.00
     },
-    {
-        "name":"Dolce Gusto XS Red Coffee Machine",
-        "category":"Coffee Machines",
-        "price":4200.00,
-        "imgSrc":"products/krups-kafemat.png",
-        "sale":3500.00
-    },
+   
     {
         "name":"Moka Oceanica Pot 3 cups",
         "category":"Coffee Machines",
