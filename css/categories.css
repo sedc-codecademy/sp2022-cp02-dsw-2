@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
+
 .categories {
   width: 100%;
   display: flex;
@@ -8,6 +9,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+
 }
 
 .card_container {
@@ -19,8 +21,9 @@
   position: relative;
   display: flex;
   justify-content: space-around;
-  z-index:999;
-}
+  /* z-index:999; */
+
+
 
 
 

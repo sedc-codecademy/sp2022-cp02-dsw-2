@@ -38,6 +38,8 @@ function eventListeners() {
         loadCapsules();
         loadMachines();
         window.localStorage.clear();
+        checkoutPage.style.display="none"
+
     });
 
 }
@@ -46,13 +48,17 @@ product_section.style.display = "none";
 saleSection.style.display = "none";
 syrupsSection.style.display="none";
 acsrsSection.style.display="none";
-capsulesSection.style.display="none"
-machinesSection.style.display="none"
+capsulesSection.style.display="none";
+machinesSection.style.display="none";
+
+
+
+
 
 product_button.addEventListener('click', function () {
     product_section.style.display = "block"
     main_section.style.display = "none"
-    footer.style.display = "none";
+    // footer.style.display = "none";
     saleSection.style.display = "none";
     checkoutPage.style.display="none"
     syrupsSection.style.display="none"
@@ -63,7 +69,7 @@ product_button.addEventListener('click', function () {
 home_button.addEventListener('click', function () {
     product_section.style.display = "none"
     main_section.style.display = "block"
-    footer.style.display = "none"
+    // footer.style.display = "none";
     saleSection.style.display = "none"
     checkoutPage.style.display="none"
     syrupsSection.style.display="none"
@@ -72,7 +78,7 @@ home_button.addEventListener('click', function () {
     machinesSection.style.display="none"
 })
 saleButton.addEventListener("click", function () {
-    footer.style.display = "none"
+    // footer.style.display = "block";
     product_section.style.display = "none"
     main_section.style.display = "none"
     saleSection.style.display = "block"
@@ -83,7 +89,7 @@ saleButton.addEventListener("click", function () {
     machinesSection.style.display="none"
 })
 syrupsButton.addEventListener("click", function () {
-    footer.style.display = "none"
+    // footer.style.display = "block";
     product_section.style.display = "none"
     main_section.style.display = "none"
     saleSection.style.display = "none"
@@ -94,7 +100,7 @@ syrupsButton.addEventListener("click", function () {
     machinesSection.style.display="none"
 })
 acsrsButton.addEventListener("click", function () {
-    footer.style.display = "none"
+    // footer.style.display = "block";
     product_section.style.display = "none"
     main_section.style.display = "none"
     saleSection.style.display = "none"
@@ -105,7 +111,7 @@ acsrsButton.addEventListener("click", function () {
     machinesSection.style.display="none"
 })
 capsulesButton.addEventListener("click", function () {
-    footer.style.display = "none"
+    // footer.style.display = "block";
     product_section.style.display = "none"
     main_section.style.display = "none"
     saleSection.style.display = "none"
@@ -116,7 +122,8 @@ capsulesButton.addEventListener("click", function () {
     machinesSection.style.display="none"
 })
 machinesButton.addEventListener("click", function () {
-    footer.style.display = "none"
+
+    // footer.style.display = "none"
     product_section.style.display = "none"
     main_section.style.display = "none"
     saleSection.style.display = "none"
@@ -160,7 +167,7 @@ function loadJSON() {
                         </div>
                         <div class = "product-content">
                             <h3 class = "product-name">${product.name}</h3>
-                        
+
                             <span class = "product-category">${product.category}</span>
                             <br>
                             <p class = "product-price">${product.price}</p>
@@ -318,7 +325,7 @@ let checkoutPage=document.getElementById("checkoutPage")
 checkoutBtn.addEventListener("click", function(){
     product_section.style.display = "none"
     main_section.style.display = "none"
-    footer.style.display = "none";
+   // footer.style.display = "none";
     saleSection.style.display = "none";
     checkoutPage.style.display="block"
     syrupsSection.style.display="none"
@@ -339,9 +346,9 @@ function loadCoffeeSyrups() {
                     if (product.sale !== product.price) {
 
                         html += `<div class = "product-item">
-                            <div class = "product-img-syrups">
+                            <div class = "product-img">
                                 <img src = "${product.imgSrc}" alt = "product image" >
-    
+ 
                                 <button type = "button" class = "add-to-cart-btn">
                                     <i class = "fas fa-shopping-cart"></i>Add To Cart
                                 </button>
@@ -353,11 +360,12 @@ function loadCoffeeSyrups() {
                                 <p class = "product-price">${product.sale}</p>
                             </div>
                         </div>`
-    
+
                     }else{
                     html += `<div class = "product-item">
-                        <div class = "product-img-syrups">
-                            <img src = "${product.imgSrc}" alt = "product image" >
+                        <div class = "product-img">
+
+                          <img src = "${product.imgSrc}" alt = "product image" >
 
                             <button type = "button" class = "add-to-cart-btn">
                                 <i class = "fas fa-shopping-cart"></i>Add To Cart
@@ -392,7 +400,9 @@ function loadAcsrs() {
                 if (product.sale !== product.price) {
 
                     html += `<div class = "product-item">
-                        <div class = "product-img-acsrs">
+
+                        <div class = "product-img">
+
                             <img src = "${product.imgSrc}" alt = "product image" >
 
                             <button type = "button" class = "add-to-cart-btn">
@@ -409,7 +419,8 @@ function loadAcsrs() {
 
                 }else{
                 html += `<div class = "product-item">
-                    <div class = "product-img-acsrs">
+
+                    <div class = "product-img">
                         <img src = "${product.imgSrc}" alt = "product image" >
 
                         <button type = "button" class = "add-to-cart-btn">
@@ -462,7 +473,9 @@ function loadCapsules() {
 
                 }else {
                 html += `<div class = "product-item">
-                    <div class = "product-img-capsules">
+
+                    <div class = "product-img">
+
                         <img src = "${product.imgSrc}" alt = "product image" >
 
                         <button type = "button" class = "add-to-cart-btn">
@@ -498,7 +511,8 @@ function loadMachines() {
                 if (product.sale !== product.price) {
 
                     html += `<div class = "product-item">
-                        <div class = "product-img-machines">
+
+                        <div class = "product-img">
                             <img src = "${product.imgSrc}" alt = "product image" >
 
                             <button type = "button" class = "add-to-cart-btn">
@@ -515,12 +529,15 @@ function loadMachines() {
 
                 }else {
                 html += `<div class = "product-item">
-                    <div class = "product-img-machines">
+
+                    <div class = "product-img">
                         <img src = "${product.imgSrc}" alt = "product image" >
 
                         <button type = "button" class = "add-to-cart-btn">
-                            <i class = "fas fa-shopping-cart"></i>Add To Cart
-                        </button>
+                                <i class = "fas fa-shopping-cart"></i>Add To Cart
+                            </button>
+
+
                     </div>
                     <div class = "product-content">
                         <h3 class = "product-name">${product.name}</h3>
@@ -538,4 +555,13 @@ function loadMachines() {
         alert(`User live server or local server`);
         //URL scheme must be "http" or "https" for CORS request. You need to be serving your index.html locally or have your site hosted on a live server somewhere for the Fetch API to work properly.
     })
+
 }
+
+productListMachines.addEventListener("click", purchaseProduct);
+productListCapsules.addEventListener("click", purchaseProduct);
+productListAcsrs.addEventListener("click", purchaseProduct);
+productListSyrups.addEventListener("click", purchaseProduct);
+=======
+}
+
