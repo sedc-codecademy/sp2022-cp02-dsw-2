@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* <section class="products" id="products">
-<div class="container">
-    <h2>All Products</h2>
-    <div class="product-list"></div>
-</div>
-</section> */
-
-
 .product-img{
     height: 200px;
     width: 420;
@@ -27,6 +19,26 @@
 }
 
 .product-img-sale{
+    height: 200px;
+    width: 420;
+    border-radius: 50px;    
+}
+.product-img-syrups{
+    height: 200px;
+    width: 420;
+    border-radius: 50px;    
+}
+.product-img-capsules{
+    height: 200px;
+    width: 420;
+    border-radius: 50px;    
+}
+.product-img-machines{
+    height: 200px;
+    width: 420;
+    border-radius: 50px;    
+}
+.product-img-acsrs{
     height: 200px;
     width: 420;
     border-radius: 50px;    
