@@ -10,18 +10,33 @@ let main_section = document.getElementsByTagName("main")[0];
 let product_section = document.getElementById("products");
 let saleSection = document.getElementById("sales");
 let saleButton = document.getElementById("sale");
+let syrupsButton=document.getElementById("coffee_syrups_btn");
+let syrupsSection=document.getElementById("syrups");
+let acsrsButton=document.getElementById("accessories_btn");
+let acsrsSection=document.getElementById("acsrs");
+let capsulesButton=document.getElementById("coffee_capsules_btn");
+let capsulesSection=document.getElementById("capsules");
+let machinesButton=document.getElementById("coffee_machines_btn");
+let machinesSection=document.getElementById("machines");
 
 const productList = document.querySelector('.product-list');
 const productListSales = document.querySelector('.product-list-sales');
+const productListSyrups = document.querySelector('.product-list-syrups');
+const productListAcsrs = document.querySelector('.product-list-acsrs');
+const productListCapsules = document.querySelector('.product-list-capsules');
+const productListMachines = document.querySelector('.product-list-machines');
 let cartItemID = 1;
 
 eventListeners();
-
 
 function eventListeners() {
     window.addEventListener('DOMContentLoaded', () => {
         loadJSON();
         sale();
+        loadCoffeeSyrups()
+        loadAcsrs();
+        loadCapsules();
+        loadMachines();
         window.localStorage.clear();
     });
 
@@ -29,27 +44,88 @@ function eventListeners() {
 
 product_section.style.display = "none";
 saleSection.style.display = "none";
+syrupsSection.style.display="none";
+acsrsSection.style.display="none";
+capsulesSection.style.display="none"
+machinesSection.style.display="none"
+
 product_button.addEventListener('click', function () {
     product_section.style.display = "block"
     main_section.style.display = "none"
     footer.style.display = "none";
     saleSection.style.display = "none";
+    checkoutPage.style.display="none"
+    syrupsSection.style.display="none"
+    acsrsSection.style.display="none";
+    capsulesSection.style.display="none"
+    machinesSection.style.display="none"
 })
 home_button.addEventListener('click', function () {
     product_section.style.display = "none"
     main_section.style.display = "block"
     footer.style.display = "none"
     saleSection.style.display = "none"
+    checkoutPage.style.display="none"
+    syrupsSection.style.display="none"
+    acsrsSection.style.display="none";
+    capsulesSection.style.display="none"
+    machinesSection.style.display="none"
 })
 saleButton.addEventListener("click", function () {
     footer.style.display = "none"
     product_section.style.display = "none"
     main_section.style.display = "none"
     saleSection.style.display = "block"
+    checkoutPage.style.display="none"
+    syrupsSection.style.display="none"
+    acsrsSection.style.display="none";
+    capsulesSection.style.display="none"
+    machinesSection.style.display="none"
 })
-
-
-
+syrupsButton.addEventListener("click", function () {
+    footer.style.display = "none"
+    product_section.style.display = "none"
+    main_section.style.display = "none"
+    saleSection.style.display = "none"
+    syrupsSection.style.display="block"
+    checkoutPage.style.display="none"
+    acsrsSection.style.display="none";
+    capsulesSection.style.display="none"
+    machinesSection.style.display="none"
+})
+acsrsButton.addEventListener("click", function () {
+    footer.style.display = "none"
+    product_section.style.display = "none"
+    main_section.style.display = "none"
+    saleSection.style.display = "none"
+    syrupsSection.style.display="none"
+    checkoutPage.style.display="none"
+    acsrsSection.style.display="block";
+    capsulesSection.style.display="none"
+    machinesSection.style.display="none"
+})
+capsulesButton.addEventListener("click", function () {
+    footer.style.display = "none"
+    product_section.style.display = "none"
+    main_section.style.display = "none"
+    saleSection.style.display = "none"
+    syrupsSection.style.display="none"
+    checkoutPage.style.display="none"
+    acsrsSection.style.display="none";
+    capsulesSection.style.display="block"
+    machinesSection.style.display="none"
+})
+machinesButton.addEventListener("click", function () {
+    footer.style.display = "none"
+    product_section.style.display = "none"
+    main_section.style.display = "none"
+    saleSection.style.display = "none"
+    syrupsSection.style.display="none"
+    checkoutPage.style.display="none"
+    acsrsSection.style.display="none";
+    capsulesSection.style.display="none"
+    machinesSection.style.display="block"
+})
 function loadJSON() {
     fetch('products.json')
         .then(response => response.json())
@@ -236,4 +312,226 @@ function deleteProduct(e) {
     localStorage.setItem('products', JSON.stringify(updatedProducts)); // updating the product list after the deletion
     updateCartInfo();
 }
-/////
+/////////
+let checkoutBtn=document.getElementById("checkoutBtn")
+let checkoutPage=document.getElementById("checkoutPage")
+checkoutBtn.addEventListener("click", function(){
+    product_section.style.display = "none"
+    main_section.style.display = "none"
+    footer.style.display = "none";
+    saleSection.style.display = "none";
+    checkoutPage.style.display="block"
+    syrupsSection.style.display="none"
+    acsrsSection.style.display="none";
+    capsulesSection.style.display="none"
+    machinesSection.style.display="none"
+})
+//FILTER BY CATEGORIES
+//---SYRUPS
+function loadCoffeeSyrups() {
+    fetch('products.json')
+        .then(response => response.json())
+        .then(data => {
+            let html = '';
+            console.log(data)
+            data.forEach(product => {
+                if (product.category === "Coffee Syrups") {
+                    if (product.sale !== product.price) {
+
+                        html += `<div class = "product-item">
+                            <div class = "product-img-syrups">
+                                <img src = "${product.imgSrc}" alt = "product image" >
+    
+                                <button type = "button" class = "add-to-cart-btn">
+                                    <i class = "fas fa-shopping-cart"></i>Add To Cart
+                                </button>
+                            </div>
+                            <div class = "product-content">
+                                <h3 class = "product-name">${product.name}</h3>
+                                <span class = "product-category">${product.category}</span><br>
+                                <p class = "product-price-old">${product.price}</p><br>
+                                <p class = "product-price">${product.sale}</p>
+                            </div>
+                        </div>`
+    
+                    }
+                    html += `<div class = "product-item">
+                        <div class = "product-img-syrups">
+                            <img src = "${product.imgSrc}" alt = "product image" >
+
+                            <button type = "button" class = "add-to-cart-btn">
+                                <i class = "fas fa-shopping-cart"></i>Add To Cart
+                            </button>
+                        </div>
+                        <div class = "product-content">
+                            <h3 class = "product-name">${product.name}</h3>
+                            <span class = "product-category">${product.category}</span>
+                            <p class = "product-price">${product.price}</p>
+                        </div>
+                    </div>
+                    `;
+                }
+            });
+            productListSyrups.innerHTML = html;
+        })
+        .catch(error => {
+            alert(`User live server or local server`);
+            //URL scheme must be "http" or "https" for CORS request. You need to be serving your index.html locally or have your site hosted on a live server somewhere for the Fetch API to work properly.
+        })
+}
+//---ACSRS
+function loadAcsrs() {
+    fetch('products.json')
+    .then(response => response.json())
+    .then(data => {
+        let html = '';
+        console.log(data)
+        data.forEach(product => {
+            if (product.category === "Accesorries") {
+                if (product.sale !== product.price) {
+
+                    html += `<div class = "product-item">
+                        <div class = "product-img-acsrs">
+                            <img src = "${product.imgSrc}" alt = "product image" >
+
+                            <button type = "button" class = "add-to-cart-btn">
+                                <i class = "fas fa-shopping-cart"></i>Add To Cart
+                            </button>
+                        </div>
+                        <div class = "product-content">
+                            <h3 class = "product-name">${product.name}</h3>
+                            <span class = "product-category">${product.category}</span><br>
+                            <p class = "product-price-old">${product.price}</p><br>
+                            <p class = "product-price">${product.sale}</p>
+                        </div>
+                    </div>`
+
+                }
+                html += `<div class = "product-item">
+                    <div class = "product-img-acsrs">
+                        <img src = "${product.imgSrc}" alt = "product image" >
+
+                        <button type = "button" class = "add-to-cart-btn">
+                            <i class = "fas fa-shopping-cart"></i>Add To Cart
+                        </button>
+                    </div>
+                    <div class = "product-content">
+                        <h3 class = "product-name">${product.name}</h3>
+                        <span class = "product-category">${product.category}</span>
+                        <p class = "product-price">${product.price}</p>
+                    </div>
+                </div>
+                `;
+            }
+        });
+        productListAcsrs.innerHTML = html;
+    })
+    .catch(error => {
+        alert(`User live server or local server`);
+        //URL scheme must be "http" or "https" for CORS request. You need to be serving your index.html locally or have your site hosted on a live server somewhere for the Fetch API to work properly.
+    })
+}
+//---CAPSULES
+function loadCapsules() {
+    fetch('products.json')
+    .then(response => response.json())
+    .then(data => {
+        let html = '';
+        console.log(data)
+        data.forEach(product => {
+            if (product.category === "Capsules") {
+                if (product.sale !== product.price) {
+
+                    html += `<div class = "product-item">
+                        <div class = "product-img-capsules">
+                            <img src = "${product.imgSrc}" alt = "product image" >
+
+                            <button type = "button" class = "add-to-cart-btn">
+                                <i class = "fas fa-shopping-cart"></i>Add To Cart
+                            </button>
+                        </div>
+                        <div class = "product-content">
+                            <h3 class = "product-name">${product.name}</h3>
+                            <span class = "product-category">${product.category}</span><br>
+                            <p class = "product-price-old">${product.price}</p><br>
+                            <p class = "product-price">${product.sale}</p>
+                        </div>
+                    </div>`
+
+                }
+                html += `<div class = "product-item">
+                    <div class = "product-img-capsules">
+                        <img src = "${product.imgSrc}" alt = "product image" >
+
+                        <button type = "button" class = "add-to-cart-btn">
+                            <i class = "fas fa-shopping-cart"></i>Add To Cart
+                        </button>
+                    </div>
+                    <div class = "product-content">
+                        <h3 class = "product-name">${product.name}</h3>
+                        <span class = "product-category">${product.category}</span>
+                        <p class = "product-price">${product.price}</p>
+                    </div>
+                </div>
+                `;
+            }
+        });
+        productListCapsules.innerHTML = html;
+    })
+    .catch(error => {
+        alert(`User live server or local server`);
+        //URL scheme must be "http" or "https" for CORS request. You need to be serving your index.html locally or have your site hosted on a live server somewhere for the Fetch API to work properly.
+    })
+}
+//---MACHINES
+function loadMachines() {
+    fetch('products.json')
+    .then(response => response.json())
+    .then(data => {
+        let html = '';
+        console.log(data)
+        data.forEach(product => {
+            if (product.category === "Coffee Machines") {
+                if (product.sale !== product.price) {
+
+                    html += `<div class = "product-item">
+                        <div class = "product-img-machines">
+                            <img src = "${product.imgSrc}" alt = "product image" >
+
+                            <button type = "button" class = "add-to-cart-btn">
+                                <i class = "fas fa-shopping-cart"></i>Add To Cart
+                            </button>
+                        </div>
+                        <div class = "product-content">
+                            <h3 class = "product-name">${product.name}</h3>
+                            <span class = "product-category">${product.category}</span><br>
+                            <p class = "product-price-old">${product.price}</p><br>
+                            <p class = "product-price">${product.sale}</p>
+                        </div>
+                    </div>`
+
+                }
+                html += `<div class = "product-item">
+                    <div class = "product-img-machines">
+                        <img src = "${product.imgSrc}" alt = "product image" >
+
+                        <button type = "button" class = "add-to-cart-btn">
+                            <i class = "fas fa-shopping-cart"></i>Add To Cart
+                        </button>
+                    </div>
+                    <div class = "product-content">
+                        <h3 class = "product-name">${product.name}</h3>
+                        <span class = "product-category">${product.category}</span>
+                        <p class = "product-price">${product.price}</p>
+                    </div>
+                </div>
+                `;
+            }
+        });
+        productListMachines.innerHTML = html;
+    })
+    .catch(error => {
+        alert(`User live server or local server`);
+        //URL scheme must be "http" or "https" for CORS request. You need to be serving your index.html locally or have your site hosted on a live server somewhere for the Fetch API to work properly.
+    })
+}
