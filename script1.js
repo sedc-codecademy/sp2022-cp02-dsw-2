@@ -553,3 +553,41 @@ productListAcsrs.addEventListener("click", purchaseProduct);
 productListSyrups.addEventListener("click", purchaseProduct);
 
 
+
+// const searchBarDiv = document.getElementById("earchBarDiv");
+// const searchBar = document.getElementById("searchBar");
+// const searchResults = document.getElementById("searchResults");
+
+// const search = async searchText => {
+//     const res = await fetch('./products.json');
+//     const data = await res.json();
+    
+//     let matches = data.filter(result => {
+    
+//         const regex = new RegExp(`^${searchText}`, 'gi');
+//         return result.name.match(regex) || result.category.match(regex);
+//     });
+    
+//     if(searchText.length === 0 ){
+//         matches = [];
+//     };
+    
+//     outputHtml(matches);
+// };
+
+// const outputHtml = matches => {
+//     if(matches.length > 0) {
+//         const html = matches.map(match => `
+//             <div class="searchCard">
+//                 <h4>${match.name} (${match.category})</h4>
+//                 <small>${match.price}</small>
+//             </div>
+//         `).join(' ');
+
+//         searchResults.innerHTML = html;
+//     }
+// }
+
+
+// searchBar.addEventListener('input', () =>  search(searchBar.value));
+

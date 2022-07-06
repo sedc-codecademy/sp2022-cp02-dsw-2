@@ -34,7 +34,8 @@ button {
 
 .container {
     max-width: 1280px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-top: 10px;
     padding: 0 1.5rem;
 
 }
@@ -44,7 +45,7 @@ button {
     justify-self: flex-end;
     padding-right: 8px;
     font-size: 15px;
-
+    margin-left: -40px;
 }
 
 #cart-btn {
@@ -191,6 +192,7 @@ button {
     background-color: rgba(85, 190, 85, 0.466);
     width: 100%;
     /* height: 100%; */
+    margin-top: 40px;
 }
 
 .sales {
@@ -201,6 +203,7 @@ button {
     background-color: rgba(85, 190, 85, 0.466);
     width: 100%;
     /* height: 100%; */
+    margin-top: 40px;
 }
 
 .syrups {
@@ -715,7 +718,7 @@ body {
 .navbar {
     position: fixed;
     width: 100%;
-    height: 10%;
+    height: 20%;
     top:0;
     left: 0;
     display: flex;
@@ -734,14 +737,16 @@ body {
     display: inline-block;
     color: white;
     padding-left: 0px;
-    margin-left: -120px;
+    margin-left: -140px;
 }
 
 .navlinks {
     display: inline-block;
     color: rgb(247, 247, 230);
-    padding-left: 30px;
+    /* padding-left: 30px; */
     width: 100%;
+    font-size: larger;
+    
 }
 
 .navLinks a {
@@ -754,7 +759,7 @@ body {
     padding: 5px 30px 5px 30px;
     color: white;
     text-decoration: none;
-    font-size: large;
+    font-size: 22px;
 }
 
 main {
@@ -770,6 +775,7 @@ main {
 }
 
 footer {
+    position: relative !important;
     display: flex;
     background-color: black;
     color: aliceblue;
