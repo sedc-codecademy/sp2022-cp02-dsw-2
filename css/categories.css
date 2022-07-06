@@ -9,23 +9,36 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  
 }
 
 .card_container {
   padding-top: 5%;
   flex-wrap: wrap;
   justify-content: center;
+  
   align-items: center;
   width: 100%;
   position: relative;
   display: flex;
   justify-content: space-around;
+  height: 100vh;
   /* z-index:999; */
+  /* margin-top: 150px; */
 }
 
-
-
-
+.syrups {
+  margin-top: 50px;
+}
+.capsules {
+  margin-top: 50px;
+}
+.acsrs {
+ margin-top: 50px;
+}
+.machines {
+  margin-top: 50px;
+}
 /* 
  .sale_card button {
     border-radius: 300px;
