@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/categories.css">
+    <link rel="stylesheet" href="./css/products.css">
+    <link rel="stylesheet" href="./css/checkout.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+
+                <div class="logo">
+                    <img src="./imgs/beans.png" width="140px"/>
+                </div>
+                <div class="navLinks">
+                    <a href="#" id="home_button">Home</a>
+                    <a href="#" id="product_button">Products</a>
+                    <a href="#" id="sale">Sale</a>
+                    <a href="#">Contact</a>
+                    <a href="#" id="search">
+                        <form>
+                            <input class="searchBar" type="text" placeholder="             Search..." />                            
+                        </form>
+                    </a>
+                    <!-- <a href="#" class="searchBarA">
+                        <div class="searchBarDiv" id="searchBarDiv">
+                            <input class="searchBar" id="searchBar" type="text" placeholder="Search..." />
+                        </div>
+                        <div class="searchResults" id="searchResults">
+
+                        </div>
+                    </a> -->
+                </div>
+                <div class="cart">
+                    <button type="button" id="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count-info"></span>
+                    </button>
+
+                    <div class="cart-container">
+                        <div class="cart-list">
+                            <!-- single item -->
+                            <!-- <div class = "cart-item">
+                                  <img src = "images/armchair.png" alt = "product image">
+                                  <div class = "cart-item-info">
+                                    <h3 class = "cart-item-name">Arm Chair</h3>
+                                    <span class = "cart-item-category">Chair</span>
+                                    <span class = "cart-item-price">$120.00</span>
+                                  </div>
+                
+                                  <button type = "button" class = "cart-item-del-btn">
+                                    <i class = "fas fa-times"></i>
+                                  </button>
+                                </div> -->
+                            <!-- end of single item  -->
+                        </div>
+
+                        <div class="cart-total">
+                            <h3>Денари: </h3>
+                            <span id="cart-total-value"></span>
+                            <!-- novo ---------------------------------------------->
+                            <div id="checkoutDiv">
+                                <button id="checkoutBtn">Check Out </button>
+                            </div>
+                            <!-- novo ---------------------------------------------->
+                        </div>
+                    </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="categories">
+            <div class="card_container">
+                <div class="card">
+                    <img src="./imgs/categories/syrup3.png" alt="Coffee Syrup" style="width:50%">
+                    <h1>Coffee Syrups</h1>
+                    <p><button id="coffee_syrups_btn">See more...</button></p>
+                </div>
+                <div class="card">
+                    <img src="./imgs/categories/accessories3.png" alt="Accessories" style="width:50%">
+                    <h1>Accessories</h1>
+                    <p><button id="accessories_btn">See more...</button></p>
+                </div>
+                <div class="card">
+                    <img src="./imgs/categories/capsule3.png" alt="Coffee Capsules" style="width:50%">
+                    <h1>Coffee Capsules</h1>
+                    <p><button id="coffee_capsules_btn">See more...</button></p>
+                </div>
+                <div class="card">
+                    <img src="./imgs/categories/machine3.png" alt="Coffee Machines" style="width:50%">
+                    <h1>Coffee Machines</h1>
+                    <p><button id="coffee_machines_btn">See more...</button></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- products section  -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2>All Products</h2>
+            <div class="product-list"></div>
+        </div>
+    </section>
+    <!-- end of products section -->
+    <!-- sales section  -->
+    <section class="sales" id="sales">
+        <div class="container">
+            <h2>Products on Sale</h2>
+            <div class="product-list-sales">
+
+
+            </div>
+        </div>
+    </section>
+    <!-- syrups section  -->
+    <section class="syrups" id="syrups">
+        <div class="container">
+            <h2>Coffee Syrups</h2>
+            <div class="product-list-syrups">
+
+
+            </div>
+        </div>
+    </section>
+    <!-- end of syrups section -->
+    <!-- Accessories section  -->
+    <section class="acsrs" id="acsrs">
+        <div class="container">
+            <h2>Accessories</h2>
+            <div class="product-list-acsrs">
+
+
+            </div>
+        </div>
+    </section>
+    <!-- end of Accessories section -->
+    <!-- Capsules section  -->
+    <section class="capsules" id="capsules">
+        <div class="container">
+            <h2>Coffee Capsules</h2>
+            <div class="product-list-capsules">
+
+
+            </div>
+        </div>
+    </section>
+    <!-- end of Capsules section -->
+    <!-- Coffee Machines section  -->
+    <section class="machines" id="machines">
+        <div class="container">
+            <h2>Coffee Machines</h2>
+            <div class="product-list-machines">
+
+
+            </div>
+        </div>
+    </section>
+    <!-- end of Coffee Machines section -->
+
+    <div class="wrapperCheckOut" id="checkoutPage">
+        <div class="containerCheckOut">
+            <form action="">
+                <h1>
+                    <i class="fas fa-shipping-fast"></i>
+                    Shipping Details
+                </h1>
+                <div class="name">
+                    <div>
+                        <label for="f-name">First</label>
+                        <input type="text" name="f-name">
+                    </div>
+                    <div>
+                        <label for="l-name">Last</label>
+                        <input type="text" name="l-name">
+                    </div>
+                </div>
+                <div class="street">
+                    <label for="name">Street</label>
+                    <input type="text" name="address">
+                </div>
+                <div class="address-info">
+                    <div>
+                        <label for="city">City</label>
+                        <input type="text" name="city">
+                    </div>
+                    <div>
+                        <label for="state">State</label>
+                        <input type="text" name="state">
+                    </div>
+                    <div>
+                        <label for="zip">Zip</label>
+                        <input type="text" name="zip">
+                    </div>
+                </div>
+                <h1 id="h1checkout">
+                    <i class="far fa-credit-card"></i> Payment Information
+                </h1>
+                <div class="cc-num">
+                    <label for="card-num">Credit Card No.</label>
+                    <input type="text" name="card-num">
+                </div>
+                <div class="cc-info">
+                    <div>
+                        <label for="card-num">Exp</label>
+                        <input type="text" name="expire">
+                    </div>
+                    <div>
+                        <label for="card-num">CCV</label>
+                        <input type="text" name="security">
+                    </div>
+                </div>
+                <div class="btns">
+                    <button>Purchase</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="footer-element-1">
+            <h4>Company Info:</h4>
+            <a href = "mailto: abc@example.com" style="color:white;">Send Email</a>
+            <p>Contact: 000-000-000</p>
+            <p>Address: St.Address Address No.0 Prilep</p>
+        </div>
+        <div class="footer-element-2">
+            <h4>Powdered by:</h4>
+            <p>SEDC TEAM NOOBS</p>
+        </div>
+    </footer>
+
+
+
+
+    <script src="script1.js">    </script>
+</body>
+
+</html>
