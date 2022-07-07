@@ -1,0 +1,94 @@
+[
+    {
+        "name":"1883 Chocolate Syrup 250ml",
+        "category":"Coffee Syrups",
+        "price":299.00,
+        "imgSrc":"products/01s.png",
+        "sale":250.00
+    },
+    {
+        "name":"1883 Irish Cream Syrup 250ml",
+        "category":"Coffee Syrups",
+        "price":299.00,
+        "imgSrc":"products/02s.png",
+        "sale":299.00
+    },
+    {
+        "name":"1883 Salted Caramel Syrup 250ml",
+        "category":"Coffee Syrups",
+        "price":299.00,
+        "imgSrc":"products/03s.png",
+        "sale":299.00
+    },
+    {
+        "name":"1883 Vanilla Syrup 250ml",
+        "category":"Coffee Syrups",
+        "price":299.00,
+        "imgSrc":"products/04s.png",
+        "sale":299.00
+    },
+    {
+        "name":"Double-wall cup 80ml",
+        "category":"Accesorries",
+        "price":299.00,
+        "imgSrc":"products/01a.png",
+        "sale":299.00
+    },
+    {
+        "name":"Double-wall cup 150ml",
+        "category":"Accesorries",
+        "price":399.00,
+        "imgSrc":"products/02a.png",
+        "sale":399.00
+    },
+    {
+        "name":"Gimoka Dolce Gusto espresso Cremoso x16",
+        "category":"Capsules",
+        "price":250.00,
+        "imgSrc":"products/01k.png",
+        "sale":250.00
+    },
+    {
+        "name":"Gimoka Dolce Gusto espresso Intenso x16",
+        "category":"Capsules",
+        "price":250.00,
+        "imgSrc":"products/02k.png",
+        "sale":250.00
+    },
+    {
+        "name":"Gimoka Dolce Gusto espresso Soave Decaffeinatte x16",
+        "category":"Capsules",
+        "price":250.00,
+        "imgSrc":"products/03k.png",
+        "sale":250.00
+    },
+    {
+        "name":"Gimoka Dolce Gusto espresso Americano Филтер Arabica x16",
+        "category":"Capsules",
+        "price":250.00,
+        "imgSrc":"products/04k.png",
+        "sale":250.00
+    },
+    {
+        "name":"Garibaldi NOA Eclissi White Coffee Machine",
+        "category":"Coffee Machines",
+        "price":3200.00,
+        "imgSrc":"products/eclissi-kafemat.png",
+        "sale":2900.00
+    },
+   
+    {
+        "name":"Moka Oceanica Pot 3 cups",
+        "category":"Coffee Machines",
+        "price":890.00,
+        "imgSrc":"products/moka-pot.png",
+        "sale":590.00
+    },
+    {
+        "name":"Moka Oceanica Pot 3 cups Blue",
+        "category":"Coffee Machines",
+        "price":890.00,
+        "imgSrc":"products/moka-pot-2.png",
+        "sale":890.00
+    }
+]
