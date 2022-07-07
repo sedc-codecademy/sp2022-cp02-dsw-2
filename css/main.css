@@ -35,7 +35,7 @@ button {
 .container {
     max-width: 1280px;
     /* margin: 0 auto; */
-    margin-top: 10px;
+    /* margin-top: 10px; */
     padding: 0 1.5rem;
 
 }
@@ -48,6 +48,7 @@ button {
     /* margin-left: -0px; */
     /* padding-left: 10px; */
     margin-right: 80px;
+    margin-top: 13px;
 }
 
 #cart-btn {
@@ -186,6 +187,8 @@ button {
 #checkoutPage.wrapperCheckOut{
     margin-top: 90px;
 }
+
+
 
 /*---------------------------------------------*/
 
@@ -749,6 +752,7 @@ body {
 }
 
 .navlinks {
+    width: 50%;
     display: inline-block;
     color: rgb(247, 247, 230);
     /* padding-left: 30px; */
@@ -786,6 +790,7 @@ main {
     align-items: center;
     justify-content: center;
     background-image: url("https://img.freepik.com/free-photo/coffee-beans-top-view-white-background-space-text_176474-5028.jpg?t=st=1657194274~exp=1657194874~hmac=3e9c8feabd45ec2fb8641329597ed84bad1b07bfdf3681c208ce6fe7d10996da&w=1060");
+
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
