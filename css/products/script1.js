@@ -37,9 +37,7 @@ function eventListeners() {
         loadAcsrs();
         loadCapsules();
         loadMachines();
-        const cartProducts = getProductFromStorage();
-        updateCartInfo();
-        cartProducts.forEach(product => addToCartList(product));
+        window.localStorage.clear();
         checkoutPage.style.display="none"
 
     });
@@ -216,7 +214,6 @@ function sale() {
 // show/hide cart container
 document.getElementById('cart-btn').addEventListener('click', () => {
     cartContainer.classList.toggle('show-cart-container');
-    
 });
 
 // add to cart
@@ -228,7 +225,6 @@ productListSales.addEventListener('click', purchaseProduct);
 function purchaseProduct(e) {
     if (e.target.classList.contains('add-to-cart-btn')) {
         let product = e.target.parentElement.parentElement;
-        
         getProductInfo(product);
         updateCartInfo();
     }
@@ -322,7 +318,6 @@ function deleteProduct(e) {
 let checkoutBtn=document.getElementById("checkoutBtn")
 let checkoutPage=document.getElementById("checkoutPage")
 checkoutBtn.addEventListener("click", function(){
-    cartContainer.classList.remove('show-cart-container');
     product_section.style.display = "none"
     main_section.style.display = "none"
     // footer.style.display = "none";
@@ -559,7 +554,7 @@ productListSyrups.addEventListener("click", purchaseProduct);
 
 
 
-
+// const searchBarDiv = document.getElementById("earchBarDiv");
 // const searchBar = document.getElementById("searchBar");
 // const searchResults = document.getElementById("searchResults");
 
