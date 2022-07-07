@@ -559,7 +559,7 @@ productListSyrups.addEventListener("click", purchaseProduct);
 
 
 
-// const searchBarDiv = document.getElementById("earchBarDiv");
+
 // const searchBar = document.getElementById("searchBar");
 // const searchResults = document.getElementById("searchResults");
 
