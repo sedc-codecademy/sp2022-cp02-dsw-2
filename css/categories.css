@@ -16,7 +16,7 @@
   padding-top: 5%;
   flex-wrap: wrap;
   justify-content: center;
-  
+  margin-top: 1px;
   align-items: center;
   width: 100%;
   position: relative;
@@ -24,7 +24,7 @@
   justify-content: space-around;
   height: 100vh;
   /* z-index:999; */
-  /* margin-top: 150px; */
+  margin-top: -45px;
 }
 
 .syrups {
@@ -39,55 +39,11 @@
 .machines {
   margin-top: 50px;
 }
-/* 
- .sale_card button {
-    border-radius: 300px;
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: rgb(62, 146, 62);
-  text-align: center;
-  cursor: pointer;
-  width: 80%;
-  font-size: 18px;
-} */
-
-
-/* .sale_card{
-    font-size: medium;
-    border-radius: 50px;
-    box-sizing: content-box; 
-    flex-wrap: wrap;
-    border: 2px solid lightgoldenrodyellow;
-    border-style: groove;
-    box-shadow: 0 4px 8px 0 rgba(255, 240, 193, 100);
-    width: 250px;
-     max-width: 250px; 
-    margin: auto;
-    text-align: center;
-    background-color: rgba(255, 240, 193, .5);
-    padding: 10px;
-}
-
- .sale_card ul {
-    list-style-type: none;
-} 
-
- .sale_card ul> li> img {
-    border: 2px solid black;
-    padding: 10%;
-    border-radius: 15px;
-    margin-bottom: 10px;
-}
-
-.sale_card img {
-    margin-left: 73px;
-}  */
 
 .searchBar {
+  margin-top: 8px;
   width: 280px;
-  height: 38px;
+  height: 43px;
   font-size: large;
   background: rgba(255, 255,255, 0.2);
   background: rgb(247, 247, 230);
@@ -99,7 +55,8 @@
   border: 2px solid lightgoldenrodyellow;
   border-style: groove;
   margin-left: -20px;
-}
+  font-family: 'Barlow', sans-serif}
+
 
 #search {
   border: none !important;
@@ -143,7 +100,7 @@
   max-width: 250px;
   margin: auto;
   text-align: center;
-  background-color: rgba(255, 240, 193, .5);
+  background-color: rgba(255, 240, 193, 0.901);
   padding: 20px;
   outline: none;
 }
