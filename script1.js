@@ -56,7 +56,7 @@ machinesSection.style.display="none";
 product_button.addEventListener('click', function () {
     product_section.style.display = "block"
     main_section.style.display = "none"
-    // footer.style.display = "none";
+    footer.style.display = "none";
     saleSection.style.display = "none";
     checkoutPage.style.display="none"
     syrupsSection.style.display="none"
