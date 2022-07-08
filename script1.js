@@ -56,7 +56,7 @@ machinesSection.style.display="none";
 product_button.addEventListener('click', function () {
     product_section.style.display = "block"
     main_section.style.display = "none"
-    footer.style.display = "none";
+    // footer.style.display = "none";
     saleSection.style.display = "none";
     checkoutPage.style.display="none"
     syrupsSection.style.display="none"
@@ -258,7 +258,7 @@ function addToCartList(product) {
         <div class = "cart-item-info">
             <h3 class = "cart-item-name">${product.name}</h3>
             <span class = "cart-item-category">${product.category}</span>
-            <span class = "cart-item-price">${product.price} ден.</span>
+            <span class = "cart-item-price">${product.price} denars</span>
 
         </div>
 
